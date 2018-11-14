@@ -1,6 +1,6 @@
 print("-----------------------------------")
 print("Rock, Papers, Scissors Account Setup")
-print("Version 2.0")
+print("Version 3.0")
 print("-----------------------------------")
 while True:
     username = input("Pick a username:  ")

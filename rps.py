@@ -1,6 +1,6 @@
 import time
 print("Made By Shehzad Karim Lalani. Visit github https://github.com/shehzad17/rock-papers-scissors to know more")
-print("Version 2.0")
+print("Version 3.0")
 loose  = "The computer wins"
 win = "You win"
 lives = 5
@@ -46,6 +46,7 @@ while True:
             print(start_menu)
             while True:
                 rps = input("Rock,Papers,Scissors?   ")
+                rps = rps.title()
                 import random
                 computer = ("Rock","Papers","Scissors")
                 computer = random.choice(computer)
@@ -143,14 +144,14 @@ while True:
                         print("You got",score,"correct")
                         print("You drew",drew,"times")
                         stop = input("Press enter to exit.")
-                        time.sleep(900)
+                        exit()
                 if computer_lives == 0:
                         print("Thanks for playing.")
                         print("The computer lost all it's lives. You Win.")
                         print("You got",score,"correct")
                         print("You drew",drew,"times")
                         stop = input("Press enter to exit.")
-                        time.sleep(900)
+                        exit()
                     #exit
                 if rps == "exit":
                         break
