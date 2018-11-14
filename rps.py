@@ -1,18 +1,21 @@
 import time
 print("Made By Shehzad Karim Lalani. Visit github https://github.com/shehzad17/rock-papers-scissors to know more")
+print("Version 2.0")
 loose  = "The computer wins"
 win = "You win"
 lives = 5
 computer_lives = 10
+password_list = []
 score = 0
 drew = 0
 while True:
     print("To begin,the game please fill the below information.")
     username = input("Please enter your username: ")
     password = input("Please enter password: ")
-    searchFile = open("accounts.csv","r")
+    searchFile = open("accounts.txt","r")
     for line in searchFile:
-        if username and password in line:
+        password_list.append(line.strip())
+        if username and password in password_list:
             print("Access Granted!")
             print("Welcome to Rock,Papers,Scissors")
             time.sleep(0.5)
